@@ -1,5 +1,5 @@
 def hello(name: str) -> None:
-    print("hello" + name)
+    print("hello " + name)
 
 
 hello("joe")    
