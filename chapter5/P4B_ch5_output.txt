@@ -1,0 +1,117 @@
+python-book-samples $ python
+Python 3.13.2 (v3.13.2:4f8bb3947cf, Feb  4 2025, 11:51:10) [Clang 15.0.0 (clang-1500.3.9.4)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> ( )
+()
+>>> (         )
+()
+>>> 50 + 50, 100 * 2
+(100, 200)
+>>> 1 / 2,
+(0.5,)
+>>> type((1, True))
+<class 'tuple'>
+>>> (1,3)[0] + (1,3)[1]  #page 79
+4
+>>> (1, 3)  #another way of doing it w/ same result
+(1, 3)
+>>> _[0] + _[1]
+4
+>>> type((1, 3)[0]), type((1, 3)[1])
+(<class 'int'>, <class 'int'>)
+>>> (1, 3)  #another way of doing it w/ same result
+(1, 3)
+>>> len((True, False, "Hello", 123.0))
+4
+>>> []
+[]
+>>> type([True, False])
+<class 'list'>
+>>> len([1.0, 1.5, 2.0])
+3
+>>> [10,100,1000]
+[10, 100, 1000]
+>>> _[1] = 5
+>>> _
+[10, 5, 1000]
+>>> [10,100,1000]
+[10, 100, 1000]
+>>> _
+[10, 100, 1000]
+>>> _.append(10000)
+>>> _
+[10, 100, 1000, 10000]
+>>> [10,100,100]     # page 88 
+[10, 100, 100]
+>>> _.pop()
+100
+>>> [10,100,1000]
+[10, 100, 1000]
+>>> _.pop()
+1000
+>>> _
+1000
+>>> a = [10,100,1000]
+>>> a.pop()
+1000
+>>> a
+[10, 100]
+>>> x = 30
+>>> y = x
+>>> z = 30
+>>> x, y, z
+(30, 30, 30)
+>>> # the above example is assignment
+>>>  a = ['a', 'b', 'c', 'd', 'e']                   #Slicing
+  File "<python-input-34>", line 1
+    a = ['a', 'b', 'c', 'd', 'e']                   #Slicing
+IndentationError: unexpected indent
+>>> a = ['a', 'b', 'c', 'd', 'e']
+>>> a[1:3]
+['b', 'c']
+>>> a[0:5]
+['a', 'b', 'c', 'd', 'e']
+>>> x = [1, 2]                      #page 96
+>>> x[0:1] = [10, 11, 12]
+>>> x
+[10, 11, 12, 2]
+>>> x[0:2] = []
+>>> x
+[12, 2]
+>>> t = (1, 7, 5, 21, 11)
+>>> sorted(t)
+[1, 5, 7, 11, 21]
+>>> sorted(t, reverse=True)
+[21, 11, 7, 5, 1]
+>>> s = ['p', 'y', 't', 'h', 'o', 'n']
+>>> sorted(s)
+['h', 'n', 'o', 'p', 't', 'y']
+>>> sorted(s, reverse=True)
+['y', 't', 'p', 'o', 'n', 'h']
+>>> help(list.append)
+
+>>> help(list)
+
+>>> import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+>>> 
