@@ -1,0 +1,150 @@
+python-book-samples $ python
+Python 3.13.2 (v3.13.2:4f8bb3947cf, Feb  4 2025, 11:51:10) [Clang 15.0.0 (clang-1500.3.9.4)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> type(...)
+<class 'ellipsis'>
+>>> x = input()
+if len(x) > 0:
+>>> ...
+Ellipsis
+>>> else:
+  File "<python-input-3>", line 1
+    else:
+    ^^^^
+SyntaxError: invalid syntax
+>>> "hello " * 3 # Sequence Replication
+'hello hello hello '
+>>> print("+" + "-+" + "$"  * 20)
++-+$$$$$$$$$$$$$$$$$$$$
+>>> print("+" + "-+" * 20)
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+>>> [1, 2] * 4
+[1, 2, 1, 2, 1, 2, 1, 2]
+>>> 15 * ("hello", 33.3)
+('hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3, 'hello', 33.3)
+>>> name = "Joe"
+>>> greeting = f"Hello {name}!"
+>>> print(greeting)
+Hello Joe!
+>>> family = "Guinea Pig"
+>>> print(f"You are {'a reptile' if family == 'Python' else 'nobody'}!")
+You are nobody!
+>>> # Previous example is a Conditional Expression
+>>> # Below are 2 examples of Range Loop
+>>> for reptile in ["python", "boa", "lizard"]:
+...     print (f"{reptile} is very tasty.")
+...     
+python is very tasty.
+boa is very tasty.
+lizard is very tasty.
+>>> for c in "hello santa claus":
+...     print(c if c != '' else ", end=")
+...     
+h
+e
+l
+l
+o
+ 
+s
+a
+n
+t
+a
+ 
+c
+l
+a
+u
+s
+>>> # below is a While Loop
+>>> year, ago = 0, 30
+>>> while year <= age:
+...     print(f"Python is now {year} years old.")
+...     year += 1
+...     
+Traceback (most recent call last):
+  File "<python-input-20>", line 1, in <module>
+    while year <= age:
+                  ^^^
+NameError: name 'age' is not defined. Did you mean: 'ago'?
+>>> year, age = 0, 30
+>>> while year <= age:
+...     prit(f"Python is now {year} years old.")
+...     year += 1
+...     
+Traceback (most recent call last):
+  File "<python-input-22>", line 2, in <module>
+    prit(f"Python is now {year} years old.")
+    ^^^^
+NameError: name 'prit' is not defined. Did you mean: 'print'?
+>>> while year <= age:
+...     print(f"Python is now {year} years old.")
+...     year += 1
+...     
+Python is now 0 years old.
+Python is now 1 years old.
+Python is now 2 years old.
+Python is now 3 years old.
+Python is now 4 years old.
+Python is now 5 years old.
+Python is now 6 years old.
+Python is now 7 years old.
+Python is now 8 years old.
+Python is now 9 years old.
+Python is now 10 years old.
+Python is now 11 years old.
+Python is now 12 years old.
+Python is now 13 years old.
+Python is now 14 years old.
+Python is now 15 years old.
+Python is now 16 years old.
+Python is now 17 years old.
+Python is now 18 years old.
+Python is now 19 years old.
+Python is now 20 years old.
+Python is now 21 years old.
+Python is now 22 years old.
+Python is now 23 years old.
+Python is now 24 years old.
+Python is now 25 years old.
+Python is now 26 years old.
+Python is now 27 years old.
+Python is now 28 years old.
+Python is now 29 years old.
+Python is now 30 years old.
+>>> # Error handling - example of 'raising and exception'
+>>> raise ValueError("oops")
+Traceback (most recent call last):
+  File "<python-input-25>", line 1, in <module>
+    raise ValueError("oops")
+ValueError: oops
+>>> if False < True:
+...     raise Exception("Really?")
+...     
+Traceback (most recent call last):
+  File "<python-input-26>", line 2, in <module>
+    raise Exception("Really?")
+Exception: Really?
+>>> try: 
+...     sum = 10 + unknown_name
+... except: 
+...     print("Somebody must have raised a red flag!")
+...     
+Somebody must have raised a red flag!
+>>> try:
+...     
+... Finally:
+...     
+... print("Error or not, here we go.")
+... 
+  File "<python-input-28>", line 3
+    Finally:
+    ^^^^^^^
+IndentationError: expected an indented block after 'try' statement on line 1
+>>> try:
+...     sum = 100 + unknown_name
+... except NameError as ex:
+...     print(ex)
+...     
+name 'unknown_name' is not defined
