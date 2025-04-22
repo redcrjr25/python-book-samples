@@ -1,53 +1,32 @@
-import sys
 import random
 
-_R, _P, _S = 'r', 'p', 's'
-WIN, LOSS, TIE = 'w', 'l', 't'
+# Constants
+R, P, S = "r", "p", "s"
+WIN, LOSS, TIE = "w", "l", "t"
 
+def user_hand() -> str:
+    """Reads user input and converts it to a constant (r, p, or s)."""
+    while True:
+        choice = input("Rock (r), Paper (p), or Scissors (s)? ").strip()
+        if choice.lower() in [R, P, S]:
+            return choice.lower()
+        print("Invalid input. Please enter r, p, or s.")
 
-def _user_hand() -> str:
-    while True: 
-        try:
-            u = input("Rock (r), Paper (p), or Scissors (s)?").strip()
-            return u[0].lower()
-        except (EOFError, KeyboardInterrupt):
-            print("\nThanks for playing the game!")
-            sys.exit()
-        except: 
-            print(f"Invalid input, {u}. Try again")
-            continue
+def computer_hand() -> str:
+    """Randomly generates a computer hand (r, p, or s)."""
+    return random.choice([R, P, S])
 
-def _computer_hand() -> str:
-    return random.choice((_R, _P, _S))
-
-
-
-def _determine_win(u: str, c: str) -> str:
-    if c == u:
+def determine_win(user: str, computer: str) -> str:
+    """Compares two hands and decides which hand wins."""
+    if user == computer:
         return TIE
-    if u == _R and c == _S or u == _P and c == _R or u == _S and c == _P:
+    if (user == R and computer == S) or (user == P and computer == R) or (user == S and computer == P):
         return WIN
     return LOSS
 
-
-def play_a_round() -> str: 
-    u = _user_hand()
-    c = _computer_hand()
-    print(f"You -- {_to_str(u)} vs {_to_str(c)} -- Computer")
-
-    return _determine_win(u, c)
-
-
-def _to_str(h: str) -> str:
-    if h == _R: 
-        return "Rock"
-    elif h == _P:
-        return "Paper"
-    elif h == _S:
-        return "Scissors"
-    else:
-        return ""
-
-
-if __name__ == "__main__":
-    play_a_round()
+def f1() -> str:
+    """Plays one round: reads user hand, generates computer hand, determines winner."""
+    user = user_hand()
+    computer = computer_hand()
+    result = determine_win(user, computer)
+    return result
