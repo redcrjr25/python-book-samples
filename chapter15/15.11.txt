@@ -1,0 +1,20 @@
+Explanation of the Code:
+
+Importing the random Module:
+
+We use random.choice() to randomly select the computer's choice from a list.
+Function Definitions:
+
+get_computer_choice(): Returns a random choice from the three possible options: 'rock', 'paper', or 'scissors'.
+get_user_choice(): Prompts the user for input, validates it to ensure it matches one of the three options, and returns the validated choice.
+determine_winner(user_choice, computer_choice): Compares the user’s choice and the computer’s choice to determine the winner according to the rules of Rock-Paper-Scissors. It returns a message indicating the outcome.
+play_game(): The main function that runs the game. It welcomes the player, enters a loop to allow for multiple rounds, retrieves choices, determines the winner, and asks whether the player wants to play again.
+Game Loop:
+
+The game continues in a loop until the player chooses not to play again after each round.
+How to Play:
+
+Simply run the script. You will be prompted to enter your choice of rock, paper, or scissors.
+The computer will randomly select its choice.
+The outcome will be displayed, and you can decide to play again or exit the game.
+This is a complete Rock-Paper-Scissors game implementation that allows user interaction with the computer through standard input and output.
