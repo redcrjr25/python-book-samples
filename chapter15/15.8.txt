@@ -1,0 +1,19 @@
+Explanation of the Code:
+
+Iterative Function (concatenate_strings_iteratively):
+
+The function initializes an empty string result.
+It uses a for loop to iterate through each item in the provided list str_list.
+Each item is appended to result, and a comma is added after each item except the last one.
+Finally, it returns the concatenated string.
+Recursive Function (concatenate_strings_recursively):
+
+This function starts with a match statement to handle different cases:
+If the list is empty ([]), it returns an empty string.
+If the list contains items, it uses unpacking to separate the first item from the rest.
+It checks if there are remaining items (rest). If so, it concatenates the first item with a comma followed by the result of calling the function on the rest of the items.
+If there are no remaining items, it returns the first item without adding a comma.
+Testing the Functions:
+
+A sample list is defined that contains multiple lists of strings.
+Each list is passed to both functions, and the results are printed to verify that both implementations yield the same result.

@@ -1,0 +1,18 @@
+Explanation of the Script:
+
+Header Row:
+
+The script begins by printing the column headers. We use end="" so that the next print will be in the same line.
+A formatted string f"{i:>4}" is used to print integers from 2 to 12, formatted to right-align with a width of 4 characters.
+Separator Line:
+
+A simple line of ---- characters is printed as a separator below the header for aesthetic clarity.
+Nested Loops for Multiplication:
+
+The outer loop iterates from 2 to 12 (for rows).
+For each row value, it prints a label (the current row number) followed by a pipe | for clarity.
+The inner loop also iterates from 2 to 12 (for columns) and computes the product row * col.
+Each product is formatted with f"{product:>4}" to ensure it's aligned properly before printing.
+New Line:
+
+After each complete row of products is printed, a print() statement ensures the next row starts on a new line.

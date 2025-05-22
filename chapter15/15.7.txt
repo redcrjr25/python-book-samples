@@ -1,0 +1,17 @@
+Explanation of the Code:
+
+Function Definition:
+
+The compare_string_length function takes two string arguments string1 and string2.
+It checks the lengths of both strings using the len() function and returns:
+-1 if string1 is shorter than string2.
+1 if string1 is longer than string2.
+0 if both strings have the same length.
+Testing the Function:
+
+We create a list called species_names containing the names of several python species, which can be used for our comparisons.
+A nested loop is used to compare each pair of species names.
+The results of the comparisons are printed to the console.
+Output:
+
+When this script runs, it will display a series of comparisons, outputting -1, 1, or 0 based on the lengths of the species names that are being compared.

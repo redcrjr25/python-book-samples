@@ -1,0 +1,16 @@
+Explanation of the Code:
+
+Iterative Function (fibonacci_iterative):
+
+This function initializes an empty list fibonacci_sequence to store the Fibonacci numbers.
+It starts with two variables a and b, initialized to 0 and 1.
+A while loop continues until fibonacci_sequence reaches the desired length n.
+Inside the loop, the current value of a is appended to the list, and then a and b are updated to the next Fibonacci numbers.
+Finally, the list of Fibonacci numbers is returned.
+Recursive Function (fibonacci_recursive):
+
+This function takes an additional three parameters: the current a and b values, and result, which stores the Fibonacci numbers during the recursive calls.
+On the first call, result is initialized to None, and then a new list is created.
+The base case checks if the length of result is less than n, indicating that we still need more Fibonacci numbers.
+The current a is appended to result, and a recursive call is made with the updated values of a, b, and result.
+Once the desired count is reached, the resulting list is returned.
