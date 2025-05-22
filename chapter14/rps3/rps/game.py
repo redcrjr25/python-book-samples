@@ -26,7 +26,7 @@ class Game:
         self._loop()
         self._end_game()
 
-    def _bammer(self):
+    def _banner(self):
         print(
             """\
 ---------------------------------
